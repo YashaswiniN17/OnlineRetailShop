@@ -38,6 +38,10 @@ export class GetproductComponent implements OnInit {
       this.alertService.showError('This product is out of stock.');
       return; 
     }
+    if (this.cartService.isProductInCart(product)) {
+      this.alertService.showError('Product is already in the cart.');
+      return; 
+    }
     this.cartService.addToCart(product);
     this.alertService.showSuccess('Product added to cart!');
   } 
