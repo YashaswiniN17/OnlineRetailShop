@@ -1,0 +1,20 @@
+<div class="background-container">
+  <div class="nav">
+    <div class="menu-items">
+        <h3><a routerLink="/home">Home</a></h3>
+        <h3><a routerLink="/GET">Products</a></h3>
+        <h3><a routerLink="/ADD">Add Products</a></h3>
+        <h3><a routerLink="/cart">Cart</a></h3>
+    </div>
+  </div>
+</div>
+@for(item of cartService.getItems(); track item.id){
+  <div class="cart-item">
+    <h3>{{item.productName}}</h3>
+    <p>Quantity:{{item.Quantity}}</p>
+    <button (click)="deleteFromCart(item)">Delete</button>
+    <button (click)="cartService.incrementQuantity(item.id)">+</button>
+    <button (click)="cartService.decrementQuantity(item.id)">-</button>
+    <button (click)="placeOrder(item)" class="order-button">Order</button>
+  </div>
+}

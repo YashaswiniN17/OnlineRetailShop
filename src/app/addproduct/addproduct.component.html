@@ -1,0 +1,22 @@
+<div class="background-container">
+    <div class="nav">
+        <div class="menu-items">
+            <h3><a routerLink="/home">Home</a></h3>
+            <h3><a routerLink="/GET">Products</a></h3>
+            <h3><a routerLink="/ADD">Add Products</a></h3>
+            <h3><a routerLink="/cart">Cart</a></h3>
+        </div>
+    </div>
+    <div class="form-container">
+        <form #ProductForm=ngForm (ngSubmit)="addproduct(ProductForm.value)">
+        <label>Product name</label>
+        <input type="text" name='Pname' ngModel>
+    
+        <label>Product quantity</label>
+        <input type="number" name='Pquan' ngModel>
+        
+        <button type="submit" >Add product</button>
+    </form>
+    </div>
+    </div>
+

@@ -1,0 +1,27 @@
+<div class="nav">
+  <div class="menu-items">
+      <h3><a routerLink="/home">Home</a></h3>
+      <h3><a routerLink="/GET">Products</a></h3>
+      <h3><a routerLink="/ADD">Add Products</a></h3>
+      <h3><a routerLink="/cart">Cart</a></h3>
+  </div>
+</div>
+<div>
+  <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+</div>
+<div class="body1">
+<div class="product-list">
+  <ng-container *ngFor="let product of products" >
+    <div class="search-container product-item" *ngIf="searchText === '' || product.ProductName?.toLowerCase().includes(searchText)">
+    <p>{{product.productName}}</p>
+    <p>{{product.quantity}}</p>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</ng-container>
+</div>
+</div>
+
+
+
+
+
