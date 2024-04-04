@@ -15,6 +15,7 @@ import { AlertService } from '../alert.service';
 export class CartComponent implements OnInit {
   PName: string = '';
   products:any[]=[];
+  items:any[]=[];
   cartService = inject(CartService);
 
   constructor(private route: ActivatedRoute, private dialog: MatDialog, private router: Router,private alertService:AlertService) {}

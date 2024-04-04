@@ -1,67 +1,75 @@
+
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #ffb6c1;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  
-  .nav h3 {
-    margin: 0;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav a:hover {
-    color: #ff69b4;
-  }
-  
-  
-  @media only screen and (max-width: 768px) {
-    .nav {
-        justify-content: space-between;
-    }
-  
-    .nav h3 {
-        display: none;
-    }
-  }
-  .menu-items {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-items a {
-    margin-left: 20px;
-  }
-  .cart-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(255, 182, 193, 0.8); /* Use RGBA for transparent background */
+  padding: 12px;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s ease; /* Add transition for background color change */
+}
+
+.nav h3 {
+  margin: 0;
+  padding: 0 10px; /* Add padding for better spacing */
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add transition for color change */
+}
+
+.nav a:hover {
+  color: #ff69b4;
+  transform: scale(1.1); /* Add scale effect on hover */
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items a {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
     justify-content: space-between;
-    border: 1px solid #ccc;
+  }
+
+  .nav h3 {
+    display: none;
+  }
+}
+
+  .cart-item {
+    display: table;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
   }
-  
   .cart-item h3 {
     margin: 0;
     font-size: 18px;
-    color: #333;
+    color: black;
     flex: 1;
   }
   
   .cart-item p {
     margin: 0 10px;
     font-size: 14px;
-    color: #666;
+    color: black;
   }
   
   .cart-item button {
@@ -93,4 +101,11 @@
   
   .cart-item .order-button:hover {
     background-color: #218838; 
-  }  
+  } 
+  .background-container{
+    background-image: url('https://images.unsplash.com/photo-1577017040065-650ee4d43339?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlydHVhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; 
+    padding: 20px;
+  } 

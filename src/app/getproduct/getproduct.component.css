@@ -1,13 +1,16 @@
 .product-list {
   display: grid;
-  gap: 10px;
-  width: 70%;
+  gap: 20px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: black;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(5, 1fr); 
   font-family: cursive;
+  margin-top: 25px;
+  justify-content: center;
 }
+
 .product-list button{
   background-color: #ff69b4;
   border: #ff69b4;
@@ -17,8 +20,7 @@
   border-radius: 2px;
 }
 .product-list button:hover{
-  transform: scale(1.25);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ color: #ffb6c1;
 }
 
 .product-item {
@@ -50,41 +52,36 @@
   animation: colorChange 3s infinite alternate;
 }
 
+
+
 .nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #ffb6c1;
-  padding: 10px;
+  background-color: rgba(255, 182, 193, 0.8); /* Use RGBA for transparent background */
+  padding: 12px;
   border-radius: 5px;
   color: #fff;
+  transition: background-color 0.3s ease; /* Add transition for background color change */
 }
 
 .nav h3 {
   margin: 0;
+  padding: 0 10px; /* Add padding for better spacing */
 }
 
 .nav a {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Add transition for color change */
 }
 
 .nav a:hover {
   color: #ff69b4;
+  transform: scale(1.1); /* Add scale effect on hover */
 }
 
-
-@media only screen and (max-width: 768px) {
-  .nav {
-      justify-content: space-between;
-  }
-
-  .nav h3 {
-      display: none;
-  }
-}
 .menu-items {
   display: flex;
   align-items: center;
@@ -92,4 +89,22 @@
 
 .menu-items a {
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav h3 {
+    display: none;
+  }
+}
+
+.main{
+  background-image: url('https://images.unsplash.com/photo-1577017040065-650ee4d43339?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlydHVhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh; 
+  padding: 20px; 
 }

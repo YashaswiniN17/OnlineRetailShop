@@ -18,50 +18,50 @@ input[type="number"] {
     box-sizing: border-box;
 }
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #ffb6c1;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    margin-bottom: 100px;
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(255, 182, 193, 0.8); /* Use RGBA for transparent background */
+  padding: 12px;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s ease; /* Add transition for background color change */
 }
 
 .nav h3 {
-    margin: 0;
+  margin: 0;
+  padding: 0 10px; /* Add padding for better spacing */
 }
 
 .nav a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add transition for color change */
 }
 
 .nav a:hover {
-    color: #ff69b4;
-}
-
-
-@media only screen and (max-width: 768px) {
-    .nav {
-        justify-content: space-between;
-    }
-
-    .nav h3 {
-        display: none;
-    }
+  color: #ff69b4;
+  transform: scale(1.1); /* Add scale effect on hover */
 }
 
 .menu-items {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menu-items a {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav h3 {
+    display: none;
+  }
 }
 
 .form-container {

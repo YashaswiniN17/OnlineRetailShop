@@ -7,7 +7,6 @@
         <h3><a routerLink="/cart">Cart</a></h3>
     </div>
   </div>
-</div>
 @for(item of cartService.getItems(); track item.id){
   <div class="cart-item">
     <h3>{{item.productName}}</h3>
@@ -18,3 +17,4 @@
     <button (click)="placeOrder(item)" class="order-button">Order</button>
   </div>
 }
+</div>

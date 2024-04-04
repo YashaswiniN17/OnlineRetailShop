@@ -16,7 +16,7 @@ export class CartService {
     localStorage.setItem('cartItems', JSON.stringify(this.items));
   }
   isProductInCart(product: any): boolean {
-    return this.items.some(item => item.Id === product.Id); 
+    return this.items.some(item => item.id === product.id); 
   }
 
   getItems(): any[] {
