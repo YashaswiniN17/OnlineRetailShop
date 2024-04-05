@@ -23,7 +23,6 @@ export class CartService {
     return this.items;
   }
   removeOrderedProducts(orderedProducts: any[]): void {
-    // Filter out the ordered products from the cart
     this.items = this.items.filter(item => !orderedProducts.includes(item));
   }
     delete(id: number): void {
